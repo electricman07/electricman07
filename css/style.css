@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html {
     width: 100%;
     height: 100%;
@@ -48,16 +51,37 @@ header.masthead {
 }
 
 .container {
+    height: 100vh;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "navigation navigation navigation navigation"
+        "box1 main-content main-content box2"
+        "photo-frame photo-frame photo-frame photo-frame"
+        "footer footer footer footer" ;
 }
 
-.navigation {
-    grid-column: 1/-1;
+#navigation {
+    grid-area: navigation;
 }
 
+#box1 {
+    grid-area: box1;
+}
+#main-content {
+    grid-area: main-content;
+}
+#box2 {
+    grid-area: box2;
+}
+#photo-frame {
+    grid-area: photo-frame;
+}
+#footer {
+    grid-area: footer;
+}
 .nav {
     display: flex;
     list-style: none;
@@ -70,4 +94,33 @@ li {
 
 a {
     text-decoration: none;
+}
+
+@media all and (max-width: 700px){
+    .container {
+        grid-template-areas: 
+            "navigation"
+            "main-content"
+            "box1"
+            "box2"
+            "photo-frame"
+            "footer";
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+    }
+}
+.frame {
+    display: flex;
+    flex-wrap: wrap;
+}
+.photo {
+    flex: 1;
+    min-width: 300px;
+    padding: 5px;
+}
+img {
+    width: 100%;
+}
+.boxes {
+    padding:10px;
 }
