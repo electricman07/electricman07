@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html {
     width: 100%;
     height: 100%;
@@ -13,7 +16,7 @@ body {
     color: #232129;
     text-align: left;
     background-color: #fff;
-  }
+}
 h1 {
 	font-size: 3rem;
 	color: #e2dbdb;
@@ -48,13 +51,5 @@ header.masthead {
 }
 .container {
     height: 100vh;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-        "navigation navigation navigation navigation"
-        "box1 main-content main-content box2"
-        "photo-frame photo-frame photo-frame photo-frame"
-        "footer footer footer footer" ;
+   
 }

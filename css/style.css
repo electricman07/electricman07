@@ -76,6 +76,7 @@ h2 {
 }
 #main-content {
     grid-area: main-content;
+    
 }
 #box2 {
     grid-area: box2;
@@ -120,6 +121,8 @@ img {
 }
 .boxes {
     padding:10px;
+    border: 5px solid black;
+    border-radius: 10px;
 }
 .responsive {
     padding: 0 6px;
@@ -127,11 +130,11 @@ img {
     width: 24.99999%;
 }
 div-photo {
-    border: 1px solid #ccc;
+    border: 5px solid #ccc;
 }
 
 div.photo:hover {
-    border: 1px solid #777;
+    border: 5px solid #777;
 }
 
 div.photo img {
